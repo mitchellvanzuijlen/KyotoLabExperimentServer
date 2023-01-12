@@ -2,6 +2,15 @@ If you wish to run experiments on Amazon Mechnical Turk, you will first need to 
 If you instead wish to run experiments on Prolific or just locally, you can skip ahead to step 11. 
 If you have already completed the set up and used the server before, you can continue straight ahead to step 12. 
 
+# Get a user account on the server
+You will have to ask somebody who already has an account to create a new user account for you, by running the following steps. 
+
+	sudo useradd -m NAME 	# make new users
+	usermod -aG sudo NAME 	# add to sudo group
+	usermod -aG users NAME 	# add to users group
+	sudo su NAME            # login to user
+	chsh -s /bin/bash       # change the default shell to bash
+
 # Setting up for Amazon Mechnical Turk
 
 1) Setup an AMT requester account on https://requester.mturk.com/
